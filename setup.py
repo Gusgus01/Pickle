@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 
 setup(
-    name="Pickle",
+    name="piickle",
     description="The one true Pickler",
     long_description=open("README.rst").read(),
     python_requires=">=3",

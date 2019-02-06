@@ -9,13 +9,13 @@ Installation
 ============
 From PyPi::
 
-    $ pip install Pickle
+    $ pip install piickle
 
 Basic Usage
 ===========
 .. code-block:: python
 
-    import Pickle
+    import piickle
 
     Pickle.dump(object, file) # Same as the python pickle.dump()
     Pickle.dumps(object) # Same as the python pickle.dumps()

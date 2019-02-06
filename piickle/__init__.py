@@ -1,5 +1,5 @@
 import pickle
-from Pickle.PickleEnum import PickleEnum
+from piickle.PickleEnum import PickleEnum
 
 
 def dump(object, file):
