@@ -13,6 +13,7 @@ From PyPi::
 
 Basic Usage
 ===========
+Use the library directly
 .. code-block:: python
 
     import piickle
@@ -20,7 +21,17 @@ Basic Usage
     piickle.dump(object, file) # Same as the python pickle.dump()
     piickle.dumps(object) # Same as the python pickle.dumps()
     piickle.load(file) # Same as the python pickle.load()
-    piickle.loads(object) # Same as the python pickle.loads()
+    piickle.loads(string) # Same as the python pickle.loads()
+
+or use the monkey patch feature
+.. code-block:: python
+    import pickle
+    import piickle
+
+    pickle.dump(object, file)
+    pickle.dumps(object)
+    pickle.load(file)
+    pickle.loads(string)
 
 Features
 ========

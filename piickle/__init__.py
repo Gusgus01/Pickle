@@ -1,6 +1,8 @@
 import pickle
 from piickle.PickleEnum import PickleEnum
 
+temp_dumps = pickle.dumps
+temp_loads = pickle.loads
 
 def dump(object, file):
     encoded_obj = dumps(object)
@@ -8,7 +10,7 @@ def dump(object, file):
 
 
 def dumps(object):
-    byte_object = pickle.dumps(object)
+    byte_object = temp_dumps(object)
     encoded_string = ""
     for byte in byte_object:
         temp = "{0:08b}".format(byte)
@@ -29,4 +31,10 @@ def loads(string):
     ints_string = []
     for x in range(int((len(decoded_string))/8)):
         ints_string.append(int(decoded_string[8*x:8*x+8], 2))
-    return pickle.loads(bytes(ints_string))
+    return temp_loads(bytes(ints_string))
+
+
+pickle.dump = dump
+pickle.dumps = dumps
+pickle.load = load
+pickle.loads = loads

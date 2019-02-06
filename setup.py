@@ -6,7 +6,7 @@ setup(
     description="The one true Pickler",
     long_description=open("README.rst").read(),
     python_requires=">=3",
-    version="1.0.1",
+    version="1.1.0",
     url="https://github.com/Gusgus01/Pickle",
     license="MIT",
     author="Gus Foley",
