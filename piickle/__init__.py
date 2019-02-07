@@ -4,6 +4,7 @@ from piickle.PickleEnum import PickleEnum
 temp_dumps = pickle.dumps
 temp_loads = pickle.loads
 
+
 def dump(object, file):
     encoded_obj = dumps(object)
     file.write(encoded_obj)
